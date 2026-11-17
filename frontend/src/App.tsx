@@ -1,8 +1,15 @@
 import React from 'react'
-
+import {BrowserRouter, Routes, Route} from  'react-router'
+import LoginPage from "./pages/loginpage/LoginPage"
+import Dashboard from './pages/dashboard/Dashboard'
 const App = () => {
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
